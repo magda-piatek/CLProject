@@ -1,0 +1,86 @@
+import React, { Component } from 'react';
+import SideBar from './SideBar'
+import MediaQuery from "react-responsive";
+
+class SideBarContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      display:false,
+      color:'grey',
+      links: [
+      {
+        linkTo:'log',
+        icon: 'flaticon-add',
+        title: 'news',
+      },
+
+      {
+        linkTo:'terms',
+        icon: 'flaticon-calendar',
+        title: 'terms',
+      },
+      {
+        linkTo:'users',
+        icon: 'flaticon-group',
+        title: 'users',
+      },
+      {
+        linkTo:'services',
+        icon: 'flaticon-calendar-1',
+        title: 'services',
+      },
+      {
+        linkTo:'therapists',
+        icon: 'flaticon-calendar-1',
+        title: 'therapists',
+      },
+      {
+        linkTo:'',
+        icon: 'flaticon-calendar-1',
+        title: 'vouchers',
+      },
+      {
+        linkTo:'',
+        icon: 'flaticon-calendar-1',
+        title: 'price categories',
+      },
+      {
+        linkTo:'equipment',
+        icon: 'flaticon-calendar-1',
+        title: 'equipment',
+      },
+
+      ]
+    }
+  }
+
+  render() {
+    let hamburger;
+    hamburger =  <span style={{color:this.state.color,zIndex:'20',cursor: 'pointer',position:'absolute',top:'20px',left:'20px'}}
+    onClick={this.display} className="glyphicon glyphicon-align-justify"></span>;
+
+    return (
+      <div className="sidebar-outer">
+      <MediaQuery  query="(max-width: 575px)">
+      {hamburger}
+      {this.state.display ? <SideBar display={this.display} links={this.state.links} /> : null}
+      </MediaQuery>
+      <MediaQuery  query="(min-width: 576px)">
+      <SideBar display={this.display} links={this.state.links} />
+      </MediaQuery>
+      </div>
+      );
+  }
+
+  display = () => {
+    this.setState(prevState => ({
+      display: !prevState.display,
+      color: prevState.color === 'grey' ? 'white' : 'grey'
+    }))
+  }
+
+}
+
+
+export default SideBarContainer;

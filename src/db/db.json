@@ -1,0 +1,287 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "Naprawa"
+    },
+    {
+      "id": 2,
+      "name": "NAprawa2"
+    },
+    {
+      "name": "sa",
+      "id": 3
+    },
+    {
+      "name": "sasa",
+      "id": 4
+    }
+  ],
+  "login": [],
+  "currentUser": [
+    {
+      "id": 1,
+      "currentUser": 11
+    }
+  ],
+  "message": [
+    {
+      "stateOfTask": "inProgess",
+      "title": "cd",
+      "message": "cdddd",
+      "sender": 11,
+      "state": "complete",
+      "category": 1,
+      "id": 1
+    },
+    {
+      "stateOfTask": "inProgess",
+      "title": "cdcds",
+      "message": "cdddddssds",
+      "sender": 11,
+      "state": "inProgess",
+      "category": 2,
+      "id": 2
+    },
+    {
+      "category": "1",
+      "title": "gf",
+      "message": "hgf",
+      "sender": 100,
+      "state": "wip",
+      "id": 3
+    },
+    {
+      "category": "2",
+      "title": "gfhh",
+      "message": "hgfhhh",
+      "sender": 100,
+      "state": "wip",
+      "id": 4
+    },
+    {
+      "category": "1",
+      "title": "hg",
+      "message": "hg",
+      "sender": 100,
+      "state": "inProgess",
+      "id": 5
+    },
+    {
+      "category": "1",
+      "title": "hg",
+      "message": "hg",
+      "sender": 100,
+      "state": "inProgess",
+      "id": 6
+    },
+    {
+      "category": "2",
+      "title": "hg",
+      "message": "hg",
+      "sender": 100,
+      "state": "inProgess",
+      "id": 7
+    },
+    {
+      "category": "1",
+      "title": "cvb",
+      "message": "vc",
+      "state": "wip",
+      "id": 8
+    },
+    {
+      "category": "1",
+      "title": "fds",
+      "message": "fdss",
+      "sender": 100,
+      "state": "inProgess",
+      "id": 9
+    }
+  ],
+  "user": [
+    {
+      "name": "sd",
+      "surname": "dfgd",
+      "address": {
+        "town": "gd",
+        "street": "gfd",
+        "houseNo": "gfd",
+        "zipCode": "gd"
+      },
+      "email": "gfd",
+      "phoneNumber": "gfd",
+      "sex": "m",
+      "password": "gd",
+      "passwordAgain": "gdgfd",
+      "type": "1",
+      "category": "2",
+      "inBox": [],
+      "id": 1
+    },
+    {
+      "name": "ala",
+      "surname": "wq",
+      "address": {
+        "town": "ewq",
+        "street": "wd",
+        "houseNo": "432",
+        "zipCode": "43"
+      },
+      "email": "ala@wp.pl",
+      "phoneNumber": "432",
+      "sex": "m",
+      "password": "333",
+      "passwordAgain": "333",
+      "type": "0",
+      "category": "1",
+      "inBox": [],
+      "id": 2
+    },
+    {
+      "name": "admin",
+      "surname": "adminer",
+      "address": {
+        "town": "re",
+        "street": "rere",
+        "houseNo": "re",
+        "zipCode": "re"
+      },
+      "email": "admin@admin.pl",
+      "phoneNumber": "54343",
+      "sex": "m",
+      "password": "aaa",
+      "passwordAgain": "aaa",
+      "type": "1",
+      "category": "1",
+      "inBox": [],
+      "id": 3
+    },
+    {
+      "name": "er",
+      "surname": "er",
+      "address": {
+        "town": "er",
+        "street": "er",
+        "houseNo": "43",
+        "zipCode": "43"
+      },
+      "email": "re",
+      "phoneNumber": "4",
+      "sex": "m",
+      "password": "fd",
+      "passwordAgain": "fd",
+      "type": "0",
+      "category": "2",
+      "inBox": [],
+      "id": 4
+    },
+    {
+      "name": "gf",
+      "surname": "gfd",
+      "address": {
+        "town": "fgd",
+        "street": "gf",
+        "houseNo": "dg",
+        "zipCode": "gf"
+      },
+      "email": "d",
+      "phoneNumber": "gd",
+      "sex": "m",
+      "password": "gg",
+      "passwordAgain": "gg",
+      "type": "0",
+      "category": null,
+      "inBox": [],
+      "id": 5
+    },
+    {
+      "name": "gf",
+      "surname": "gfd",
+      "address": {
+        "town": "fgd",
+        "street": "gf",
+        "houseNo": "dg",
+        "zipCode": "gf"
+      },
+      "email": "d",
+      "phoneNumber": "gd",
+      "sex": "m",
+      "password": "gg",
+      "passwordAgain": "gg",
+      "type": "0",
+      "category": "1",
+      "inBox": [],
+      "id": 6
+    },
+    {
+      "name": "gf",
+      "surname": "gfd",
+      "address": {
+        "town": "fgd",
+        "street": "gf",
+        "houseNo": "dg",
+        "zipCode": "gf"
+      },
+      "email": "d",
+      "phoneNumber": "gd",
+      "sex": "m",
+      "password": "d",
+      "passwordAgain": "d",
+      "type": "0",
+      "category": "1",
+      "inBox": [
+        "sa",
+        "sasa",
+        "sasaasa"
+      ],
+      "id": 11
+    },
+    {
+      "name": "a",
+      "surname": "s",
+      "address": {
+        "town": "ds",
+        "street": "sd",
+        "houseNo": "43",
+        "zipCode": "re"
+      },
+      "email": "a",
+      "phoneNumber": "fd",
+      "sex": "m",
+      "password": "a",
+      "passwordAgain": "a",
+      "type": "1",
+      "category": "1",
+      "inBox": [
+        "sa",
+        "sasa",
+        "sasaasa"
+      ],
+      "id": 99
+    },
+    {
+      "name": "u",
+      "surname": "user",
+      "address": {
+        "town": "kj",
+        "street": "jl",
+        "houseNo": "jl",
+        "zipCode": "jl"
+      },
+      "email": "u",
+      "phoneNumber": "jlk",
+      "sex": "m",
+      "password": "u",
+      "passwordAgain": "u",
+      "type": "0",
+      "category": "1",
+      "inBox": [
+        "sa",
+        "sasa",
+        "sasaasa"
+      ],
+      "id": 100
+    }
+  ]
+}

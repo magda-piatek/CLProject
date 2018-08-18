@@ -1,0 +1,27 @@
+.registrationPage{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background: $blue;
+
+  .panel{
+    border-width: 3px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 600px;
+    position: relative;
+    .outer{
+      width: 250px;
+      margin:0 auto;
+
+      .label-style{
+        margin:0 0 15px 0;
+        .input-style{
+          left:150px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+  width: 95%;
+  margin: 15px auto;
+}
+
+.container-drag {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+}
+
+.wip {
+  //position: absolute;
+  width: 400px;
+  height: 100vh;
+ // left: 0;
+  top: 10;
+  float: left;
+  border:2px solid #ddd;
+  background:#ddd;
+}
+.inProgess{
+ //   position: absolute;
+  width:400px;
+  height: 100vh;
+  float: left;
+  //left: 50%;
+  //transform:translteX(-50%);
+  top: 10;
+  border:2px solid #ddd;
+  background:#ddd;
+  margin:0 30px;
+
+}
+
+
+.task-header {
+  display: inline-block;
+  width:100%;
+  background: $blue;
+  color:white;
+    padding: 15px;
+  font-weight: 700;
+  font-size: 20px;
+   
+}
+
+.droppable {
+  float: left;
+ // position: absolute;
+  width: 400px;
+  height: 100vh;
+ // right: 0;
+//  top: 10;
+  border:2px solid #ddd;
+  background:#ddd;
+
+}
+
+.draggable {
+  width: 300px;
+  box-shadow: 0 0 14px grey;
+  border-radius: 10px;
+  margin: 15px auto;
+  line-height: 5em;
+  cursor: pointer;
+  background: white;
+  .btn-style{
+    height: 20px;
+    display: inline;
+    font-size: 10px;
+    font-weight: 600;
+    margin-top:10px;
+    &:hover{
+      color: white;
+    }
+  }
+  &:hover{
+      box-shadow: 0 0 14px $blue;
+  }
+    div{
+    height: 20px;
+  }
+  .title-sm{
+    font-weight: 600;
+    color:$blue;
+  }
+
+}

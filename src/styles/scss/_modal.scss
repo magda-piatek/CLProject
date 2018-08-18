@@ -1,0 +1,41 @@
+  .custom-modal{
+    opacity:1;
+    overflow: visible;
+  }
+  .custom-modal-content{
+    border-radius: 0;
+    box-shadow:none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) !important;
+    border-color: #ddd !important;
+    padding: 25px;
+  }
+  .custom-modal-dialog{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) !important;
+    width: 95%;
+    background:white;
+  }
+  .custom-modal-header{
+    padding:0 0 10px 0;
+    font-weight: 600;
+    text-align:center;
+    position: relative;
+    border:0 !important;
+    font-size:16px;
+  }
+
+  .label-style{
+    width: 100%;
+    text-align: center;
+  }
+
+  .close{
+    position: absolute;
+    top:7px;
+    right: 7px;
+    &:focus{
+      outline:0 !important;
+    }
+  } 

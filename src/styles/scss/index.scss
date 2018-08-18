@@ -1,0 +1,39 @@
+$blue:#006baa;
+$i: 0;
+@while $i <= 50 {
+  .mt-#{$i} { margin-top: 1px * $i !important; }
+  .mb-#{$i} { margin-bottom: 1px * $i !important; }
+  .ml-#{$i} { margin-left: 1px * $i; }
+  .mr-#{$i} { margin-right: 1px * $i; }
+  
+  .pt-#{$i} { padding-top: 1px * $i; }
+  .pb-#{$i} { padding-bottom: 1px * $i; }
+  .pl-#{$i} { padding-left: 1px * $i; }
+  .pr-#{$i} { padding-right: 1px * $i; }
+  .fs-#{$i} { font-size: 1px * $i; }
+  $i: $i + 6;
+}
+@import './_SideBar';
+@import './_block';
+@import './_modal';
+@import './_icons';
+@import './_userPage';
+@import './_topBar';
+@import './_loginPage';
+@import './_button';
+@import './_label';
+@import './_registrationPage';
+@import './_table';
+
+body {    
+  background-color: transparent !important;
+  font-family: 'Open Sans', sans-serif !important;
+  color: #59626d !important;
+  p{
+    margin: 15px 0;
+  }
+}   
+
+.center{
+  text-align: center;
+}

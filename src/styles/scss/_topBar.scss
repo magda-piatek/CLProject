@@ -1,0 +1,70 @@
+.navbarTop{
+
+  position: relative;
+  color:grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
+box-shadow: 0 0 20px grey;
+  margin-bottom: 30px;
+  i{
+    color:grey;
+  }
+  &-block{
+    width:100%;
+    &__logout, &__user{
+      text-align: center;
+    }
+  }
+
+}
+.user{
+  color: #007fb5;
+}
+
+@media(min-width: 576px){
+  .navbarTop{
+    align-items: auto;
+    &-block{
+      position: absolute;
+      right: 10px;
+      width: auto;
+
+      &__logout, &__user{
+        display: block;
+        text-align: right;
+      }
+    }
+    .navbarTop{
+      width: calc(100% - 190px);
+      float: right;
+    }
+  }
+
+  .reception-page-content{
+    float: left;
+  }
+}
+
+@media(min-width: 768px){
+  .navbarTop{
+    &__user{
+      float: left;
+      margin-right: 20px;
+    }
+    &-block{
+      right:50px;
+      &__logout, &__user{
+        display: inline;
+        text-align: center;
+      }
+
+      &__user{
+        margin-right: 30px;
+      }
+    }
+
+  }
+}

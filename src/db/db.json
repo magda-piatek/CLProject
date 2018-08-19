@@ -25,16 +25,16 @@
       "id": 7
     },
     {
-      "name": "Sekretariat",
-      "id": 8
-    },
-    {
       "name": "Testowa",
       "id": 9
     },
     {
       "name": "Kuchnia",
       "id": 10
+    },
+    {
+      "name": "Kategoria",
+      "id": 11
     }
   ],
   "login": [],
@@ -51,7 +51,7 @@
       "message": "Proszę o dostarczenie płynu do mycia naczyń do kuchni",
       "sender": 1,
       "state": "complete",
-      "messageReceived": "Gotowe",
+      "messageReceived": "Zakupiony",
       "id": 2
     },
     {
@@ -100,15 +100,6 @@
       "id": 8
     },
     {
-      "category": "6",
-      "title": "Mycie okien",
-      "message": "Proszę o umycie okien w sekretariacie",
-      "sender": 4,
-      "state": "wip",
-      "messageReceived": "",
-      "id": 9
-    },
-    {
       "category": "1",
       "title": "Drukowanie ulotek",
       "message": "Proszę o jak najszybsze wydrukowanie ulotek",
@@ -122,7 +113,7 @@
       "title": "Utworzenie poczty",
       "message": "Proszę o stworzenie nowego e-mail`a dla Anny Nowak",
       "sender": 3,
-      "state": "complete",
+      "state": "inProgess",
       "messageReceived": "Ok ",
       "id": 11
     },
@@ -145,13 +136,22 @@
       "id": 13
     },
     {
-      "category": "10",
-      "title": "Zakup herbaty",
-      "message": "Proszę o zakup herbaty",
-      "sender": 4,
+      "category": "6",
+      "title": "Schody",
+      "message": "Proszę o umycie schodów",
+      "sender": 1,
       "state": "complete",
-      "messageReceived": "zakupiono",
-      "id": 14
+      "messageReceived": "gotowe",
+      "id": 15
+    },
+    {
+      "category": "10",
+      "title": "Zakup ciasteczek",
+      "message": "Proszę o kupno ciasteczek",
+      "sender": 1,
+      "state": "complete",
+      "messageReceived": "Kupione",
+      "id": 16
     }
   ],
   "user": [

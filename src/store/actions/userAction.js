@@ -12,7 +12,7 @@ export const userReceivedAction = (user) => {
 export const userCurrentAction = (userById) => {
   return {
     type: CURRENT,
-userById:userById
+    userById:userById
   };
 }
 

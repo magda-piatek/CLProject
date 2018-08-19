@@ -27,10 +27,10 @@ class MessageForm extends Component {
       formData={formData}
       onChange={onChange}
       schema={[
-        {name:'dział', path:'category', type:'dropdown',options:
+        {name:'Dział', path:'category', type:'dropdown',options:
         [{value:'', label:''}].concat(category)},
-        {name:'tytuł', path:'title'},
-        {name:'wiadomość', path:'message', type:'textarea'},
+        {name:'Tytuł', path:'title'},
+        {name:'Wiadomość', path:'message', type:'textarea'},
         ]}
         />
         <button className="btn-style" onClick={()=>{action();this.showModal()}}>Wyślij wiadomość</button>

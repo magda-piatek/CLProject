@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserContainer from '../../components/user/UserContainer';
 import SideBarUserContainer from '../../components/sideBar/SideBarUserContainer';
 import TopBarUserContainer from '../../components/topBarUser/TopBarUserContainer';
 import userAction from '../../store/actions/userAction';

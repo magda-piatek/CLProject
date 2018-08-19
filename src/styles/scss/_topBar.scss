@@ -1,5 +1,5 @@
 .navbarTop{
-
+  margin-bottom: 0 !important;
   position: relative;
   color:grey;
   display: flex;
@@ -8,7 +8,6 @@
   font-weight: 600;
 
 box-shadow: 0 0 20px grey;
-  margin-bottom: 30px;
   i{
     color:grey;
   }
@@ -23,7 +22,32 @@ box-shadow: 0 0 20px grey;
 .user{
   color: #007fb5;
 }
+.navbarTopAdmin{
+  box-shadow: 0 0 20px $blue;
 
+  .container-fluid{
+    position: relative;
+  }
+  .navbarTop-block{
+   left: 0;
+   a{
+    padding:0 15px;
+   }
+  }
+  .nav-position{
+    position: absolute;
+    right: 15px;
+    .label-style{
+      display: inline;
+      font-weight: 600;
+    }
+    .input-style{
+      position: relative;
+      left:auto;
+      margin:0 15px 0 5px;
+    }
+  }
+}
 @media(min-width: 576px){
   .navbarTop{
     align-items: auto;

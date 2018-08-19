@@ -6,36 +6,42 @@ import messageAction from '../../store/actions/messageAction';
 
 class MessageListContainer extends Component {
   constructor (props) {
-      super(props)
-      this.state = {
+    super(props)
+    this.state = {
 
 
     }
   };
   componentDidMount(){
     this.props.getMessage();
+    this.props.getCategory();
+
   }
 
   render() {
-const {message} = this.props;
+    const {message,category} = this.props;
 
     console.log("sss",this.props.userById ? this.props.userById : null)
     return (
-        <MessageList message={message} sender={this.props.userById.id} />
-    );
+      <MessageList category={category} message={message} sender={this.props.userById.id} />
+      );
   }
 }
 
 function mapStateToProps(state){
   return {
-   message: state.message,
-   userById:state.userById
+    message: state.message,
+    userById:state.userById,
+    category: state.category
+
 
   }
 };
 function mapDispatchToProps(dispatch) {
   return {
-      getMessage: () => dispatch(messageAction.getMessage())
+    getMessage: () => dispatch(messageAction.getMessage()),
+    getCategory:() => dispatch(categoryAction.getCategory())
+
   }
 }
 

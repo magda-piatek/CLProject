@@ -6,8 +6,8 @@ class ListOfUsersPage extends Component {
   render() {
     return (
         <ListOfUsersContainer />
-  )
-}
+    )
+  }
 }
 
 export default ListOfUsersPage;

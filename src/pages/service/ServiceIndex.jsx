@@ -10,21 +10,15 @@ class ServiceIndex extends Component {
     const {path} = this.props.match;
     return (
       <div>
-      <ServicePage>
-      <Switch>
-{/*    <Route exact path={`${path}postbox/`} component={PostBoxServicePage} />
-    <Route exact path={`${path}inbox/`} component={InBoxServicePage} />
-
-    <Route exact path={`${path}messages/`} component={MessagesServicePage} />*/}
-     <Route exact path={`${path}`} component={TasksPage} />
- <Route exact path={`${path}usersList`} component={ListOfUsersPage} />
-     <Route exact path={`${path}addCategory`} component={CategoryPage} />
-
-
-    </Switch>
-    </ServicePage>
-    </div>
-    );
+        <ServicePage>
+          <Switch>
+            <Route exact path={`${path}/`} component={TasksPage} />
+            <Route exact path={`${path}usersList`} component={ListOfUsersPage} />
+            <Route exact path={`${path}addCategory`} component={CategoryPage} />
+          </Switch>
+        </ServicePage>
+      </div>
+      );
   }
 }
 

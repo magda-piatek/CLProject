@@ -11,13 +11,13 @@ class Router extends Component {
   render() {
     return (
       <BrowserRouter>
-      <Switch>
-      <Route exact path="/" component={LoginPage} />
-      <Route path="/registration" component={RegistrationPage} />
-      <Route path="/user/" userType={0} component={UserIndex} />
-      <Route path="/service/" userType={1}  component={ServiceIndex} />
-      <Route path="/category" component={CategoryPage} />
-      </Switch>
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+          <Route path="/registration" component={RegistrationPage} />
+          <Route path="/user/" userType={0} component={UserIndex} />
+          <Route path="/service/" userType={1}  component={ServiceIndex} />
+          <Route path="/category" component={CategoryPage} />
+        </Switch>
       </BrowserRouter>
       );
   }

@@ -24,11 +24,13 @@ $i: 0;
 @import './_label';
 @import './_registrationPage';
 @import './_table';
+@import './_adminPage';
 
 body {    
   background-color: transparent !important;
   font-family: 'Open Sans', sans-serif !important;
   color: #59626d !important;
+  min-height: 100vh;
   p{
     margin: 15px 0;
   }

@@ -4,11 +4,10 @@ import ServiceMessageListContainer from '../../components/serviceMessageList/Ser
 class TasksPage extends Component {
 
   render() {
-    console.log(this.props.categoriesSelected)
     return (
         <ServiceMessageListContainer />
-  )
-}
+    )
+  }
 }
 
 export default TasksPage;

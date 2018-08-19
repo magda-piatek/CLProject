@@ -5,10 +5,10 @@ class CategoryPage extends Component {
 
   render() {
     return (
-      
-        <CategoryContainer />
-  )
-}
+
+      <CategoryContainer />
+      )
+  }
 }
 
 export default CategoryPage;

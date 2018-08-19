@@ -331,7 +331,7 @@
   top: 0;
   z-index: 10;
   color: white;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .sidebar__title {
   text-align: center;
@@ -354,6 +354,7 @@
   margin: 15px 0;
   display: block;
   color: white;
+  font-size: 13px;
 }
 .sidebar ul li a:hover, .sidebar ul li a:active, .sidebar ul li a:visited, .sidebar ul li a:focus {
   color: white;
@@ -401,21 +402,21 @@
 
 .wip {
   width: 400px;
-  height: 100vh;
-  top: 10;
+  min-height: calc(100vh - 80px);
+  margin-top: 30px;
   float: left;
   border: 2px solid #ddd;
-  background: #ddd;
+  background: white;
 }
 
 .inProgess {
   width: 400px;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   float: left;
-  top: 10;
   border: 2px solid #ddd;
-  background: #ddd;
+  background: white;
   margin: 0 30px;
+  margin-top: 30px;
 }
 
 .task-header {
@@ -431,9 +432,10 @@
 .droppable {
   float: left;
   width: 400px;
-  height: 100vh;
+  min-height: calc(100vh - 80px);
   border: 2px solid #ddd;
-  background: #ddd;
+  background: white;
+  margin-top: 30px;
 }
 
 .draggable {
@@ -461,7 +463,8 @@
 .draggable div {
   height: 20px;
 }
-.draggable .title-sm {
+
+.title-sm {
   font-weight: 600;
   color: #006baa;
 }
@@ -509,6 +512,15 @@
 }
 .close:focus {
   outline: 0 !important;
+}
+
+.detailsOfTask .custom-modal-dialog {
+  width: 600px;
+  border: 3px solid #ddd;
+  border-radius: 20px;
+}
+.detailsOfTask .textarea {
+  margin: 10px 0;
 }
 
 @font-face {
@@ -611,9 +623,48 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
   margin-left: 200px;
   position: relative;
   width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+.sendMessageForm {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px grey;
+  padding: 30px;
+  border-radius: 10px;
+}
+.sendMessageForm .label-style {
+  margin: 30px 0;
+}
+.sendMessageForm .input-style, .sendMessageForm .textarea {
+  width: calc(100% - 100px);
+  left: 100px;
+  position: absolute;
+}
+
+.confirmMessage {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.confirmMessage .btn-style {
+  margin-top: 20px;
+}
+.confirmMessage .custom-modal-dialog {
+  border: 3px solid #ddd;
+  border-radius: 20px;
+}
+
+.messageList {
+  margin: 30px auto;
+  width: 90%;
 }
 
 .navbarTop {
+  margin-bottom: 0 !important;
   position: relative;
   color: grey;
   display: flex;
@@ -621,7 +672,6 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
   justify-content: center;
   font-weight: 600;
   box-shadow: 0 0 20px grey;
-  margin-bottom: 30px;
 }
 .navbarTop i {
   color: grey;
@@ -635,6 +685,32 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
 
 .user {
   color: #007fb5;
+}
+
+.navbarTopAdmin {
+  box-shadow: 0 0 20px #006baa;
+}
+.navbarTopAdmin .container-fluid {
+  position: relative;
+}
+.navbarTopAdmin .navbarTop-block {
+  left: 0;
+}
+.navbarTopAdmin .navbarTop-block a {
+  padding: 0 15px;
+}
+.navbarTopAdmin .nav-position {
+  position: absolute;
+  right: 15px;
+}
+.navbarTopAdmin .nav-position .label-style {
+  display: inline;
+  font-weight: 600;
+}
+.navbarTopAdmin .nav-position .input-style {
+  position: relative;
+  left: auto;
+  margin: 0 15px 0 5px;
 }
 
 @media (min-width: 576px) {
@@ -710,11 +786,12 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
   background: #006baa;
   display: block;
   margin: 0 auto;
-  color: white;
+  color: white !important;
   border: 0;
 }
 .btn-style:hover, .btn-style:active, .btn-style:visited, .btn-style:focus {
   outline: 0;
+  color: white !important;
 }
 .btn-style-sm {
   font-size: 12px;
@@ -739,6 +816,21 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
 }
 .input-style:focus {
   outline: 0;
+}
+
+.textarea {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
+  display: block;
+  resize: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  font-weight: 500;
+}
+.textarea:focus {
+  outline: 0 !important;
+  border: 1px solid rgba(128, 128, 128, 0.5);
 }
 
 .registrationPage {
@@ -768,17 +860,21 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
 }
 
 .table-responsive {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px grey !important;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: white;
+  padding: 20px;
 }
 
 .table-responsive {
   margin: 0 auto;
   box-shadow: none;
   width: 100%;
-  border: 15px solid white;
+  border: 0;
+}
+.table-responsive table {
+  width: 100%;
 }
 .table-responsive thead {
   border-bottom: 2px solid #007fb5;
@@ -803,10 +899,49 @@ i:hover, i:active, i:visited, i:focus, a:hover, a:active, a:visited, a:focus {
   background-color: white;
 }
 
+.searchBlock {
+  margin: 30px 0;
+}
+.searchBlock .input-style {
+  left: 130px;
+}
+
+.servicePage {
+  min-height: 100vh;
+  background: #ddd;
+  padding-top: 30px;
+}
+
+.category-container .table-responsive {
+  box-shadow: none !important;
+}
+.category-container .table-responsive .btn-style {
+  margin-top: 0;
+  font-size: 8px;
+}
+.category-container .panel {
+  padding: 15px;
+}
+.category-container .outer {
+  width: 300px;
+  margin: 15px auto;
+}
+.category-container .input-style {
+  position: relative;
+  left: auto;
+  margin-left: 10px;
+  width: 240px;
+}
+.category-container .btn-style {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
 body {
   background-color: transparent !important;
   font-family: "Open Sans", sans-serif !important;
   color: #59626d !important;
+  min-height: 100vh;
 }
 body p {
   margin: 15px 0;

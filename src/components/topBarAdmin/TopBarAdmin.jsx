@@ -16,29 +16,34 @@ class TopBarAdmin extends Component {
     else{
       categorySelection = ''
     }
-    return (
-      <nav className="navbar navbarTop">
+
+  return (
+      <nav className="navbar navbarTop navbarTopAdmin">
+      <div className="container-fluid">
       <div className="navbarTop-block">
-      <Link to={`${match.path}usersList`}>LIST OF USERS</Link>
-      <Link to={`${match.path}addCategory`}>CREATE CATEGORY</Link>
-      <Form
+      <Link to={`${match.path}`}>WIADOMOŚCI</Link>
+      <Link to={`${match.path}usersList`}>LISTA UŻYTKOWNIKÓW</Link>
+      <Link to={`${match.path}addCategory`}>DODAJ KATEGORIĘ</Link>
+      </div>
+
+      <div className="nav-position">
+      {window.location.pathname === "/service/" ? <Form
       formData={formData}
       onChange={onChange}
       schema={[
 
-        {name:'category', path:'categoriesSelected', type:'dropdown',options:
+        {name:'kategoria', path:'categoriesSelected', type:'dropdown',options:
         [{value:'', label:''}].concat(categorySelection)},
         ]}
-        /> 
-        <div>
+        /> : null}
         <div className="navbarTop-block__user">
-        user
-        <span className="user">{" "+userName}</span>
+        użytkownik:
+        <span className="user">{" "+userName ? userName : ''}</span>
 
         </div>
         <Link to='/' onClick={this.props.logout} className="navbarTop-block__logout">
         <i className="flaticon-arrow white"></i>
-        logOut
+       WYLOGUJ SIĘ
         </Link>
         </div>
         </div>

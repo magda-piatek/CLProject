@@ -6,10 +6,11 @@
   background: $blue;
   display: block;
   margin: 0 auto;
-  color: white;
+  color: white !important;
   border:0;
   &:hover, &:active, &:visited, &:focus{
     outline: 0;
+    color:white !important;
   }
   &-sm{
     font-size: 12px;

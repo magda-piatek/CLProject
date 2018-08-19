@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import MessageForm from './MessageForm';
 import categoryAction from '../../store/actions/categoryAction';
 import messageAction from '../../store/actions/messageAction';
+import ModalContainer from '../common/modal/ModalContainer';
 
 class MessageFormContainer extends Component {
   constructor (props) {
@@ -12,20 +13,25 @@ class MessageFormContainer extends Component {
       title:'',
       message:'',
       sender:this.props.userById.id,
-      state:'wip'
+      state:'wip',
+      messageReceived:''
 
     }
   };
+
+
   componentDidMount() {
     this.props.getCategory();
   }
 
 
- render() {
+  render() {
     const {category, userId} = this.props;
     console.log(this.props.userById.id)
     return (
-      <MessageForm category={category} action={()=>this.props.sendMessage(this.state)} formData={this.state} onChange={s=>this.setState(s)} />
+      <div>
+        <MessageForm category={category} action={()=>this.props.sendMessage(this.state)} formData={this.state} onChange={s=>this.setState(s)} />
+      </div>
       );
   }
 }

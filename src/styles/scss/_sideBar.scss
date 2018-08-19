@@ -6,7 +6,7 @@
   top:0;
   z-index: 10;
   color:white;
-  padding:0 15px;
+  padding:0 10px;
   &__title{
     text-align: center;
     font-size:30px;
@@ -28,6 +28,7 @@
       margin:15px 0;
       display: block;
       color:white;
+      font-size: 13px;
       &:hover, &:active, &:visited, &:focus{
         color:white;
       }

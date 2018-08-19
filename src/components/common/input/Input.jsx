@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-//import Validator from 'email-validator';
 import 'react-datepicker/dist/react-datepicker.css';
 import Textarea from '../textarea/Textarea';
 
@@ -15,11 +14,7 @@ class Input extends Component {
     const {type,onChange, options, validation, ...rest} = this.props;
     let input;
 
-
-  if (type === "date"){
-    input =  <DatePicker selected={this.props.value || moment()} onChange={onChange} peekNextMonth showMonthDropdown showYearDropdown dropdownMode="select" />
-  }
-  else if (type === "dropdown"){
+  if (type === "dropdown"){
     input =
       <select className="input-style" onChange={this.handleChange} {...rest}>
         {options.map(o=><option key={o.value} value={o.value}>{o.label}</option>)}

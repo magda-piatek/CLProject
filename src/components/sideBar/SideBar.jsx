@@ -5,23 +5,25 @@ import { Link } from 'react-router-dom';
 class SideBar extends Component {
   render() {
     const { t, match } = this.props;
+
     const menu =  this.props.links.map((e,index) => 
       <li 
-        onClick={this.props.display} 
-        key={index}
+      onClick={this.props.display} 
+      key={index}
       >
-      <Link to={`${match.path}${e.linkTo}`}><i className={e.icon}></i>{e.title}</Link>
+        <Link to={`${match.path}${e.linkTo}`}><i className={e.icon}></i>{e.title}</Link>
       </li>)
+
     return (
       <nav className="sidebar">
         <div className="sidebar__title">
-         <Link to={`/`}>...</Link> 
+          <Link to={`/`}>WORK SERVICE</Link> 
         </div>
-        <div className="sidebar__menu">
-        MENU
-        </div>
+      <div className="sidebar__menu">
+      MEMU
+      </div>
         <ul>
-        {menu}
+          {menu}
         </ul>
       </nav>
       );

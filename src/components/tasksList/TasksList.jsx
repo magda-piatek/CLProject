@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import categoryAction from '../../store/actions/categoryAction';
 import messageAction from '../../store/actions/messageAction';
 
-class PostBox extends Component {
+class TasksList extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -11,12 +11,9 @@ class PostBox extends Component {
 
     }
   };
-  componentDidMount(){
-    this.props.getMessage();
-  }
+
 
   render() {
-    const {message} = this.props;
     return (
       <div>kdk</div>
       );
@@ -24,4 +21,4 @@ class PostBox extends Component {
 }
 
 
-export default PostBox;
+export default TasksList;

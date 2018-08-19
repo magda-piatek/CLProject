@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import TopBarUser from './TopBarUser';
 import logoutAction from '../../store/actions/logoutAction';
 import userAction from '../../store/actions/userAction';
+import { Redirect } from 'react-router-dom';
 
 
 class TopBarUserContainer extends Component {
@@ -13,9 +14,12 @@ class TopBarUserContainer extends Component {
 
   render() {
     console.log(this.props.userById)
-    const {...rest} = this.props;
+    const {user,...rest} = this.props;
+    if(!user){
+          return <Redirect to='/'/>
+    }
     return (
-      <TopBarUser  user={this.props.user} userName={this.props.userById.name} logout={this.props.logoutAction} {...rest}/>
+      <TopBarUser  user={this.props.user} userSurname={this.props.userById.surname} userName={this.props.userById.name} logout={this.props.logoutAction} {...rest}/>
     );
   }
 }

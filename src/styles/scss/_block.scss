@@ -12,27 +12,24 @@
 }
 
 .wip {
-  //position: absolute;
-  width: 400px;
-  height: 100vh;
- // left: 0;
-  top: 10;
-  float: left;
-  border:2px solid #ddd;
-  background:#ddd;
+//position: absolute;
+width: 400px;
+min-height: calc(100vh - 80px);
+// left: 0;
+margin-top:30px;
+float: left;
+border:2px solid #ddd;
+background:white;
 }
 .inProgess{
- //   position: absolute;
-  width:400px;
-  height: 100vh;
-  float: left;
-  //left: 50%;
-  //transform:translteX(-50%);
-  top: 10;
-  border:2px solid #ddd;
-  background:#ddd;
-  margin:0 30px;
-
+//   position: absolute;
+width:400px;
+min-height: calc(100vh - 80px);
+float: left;
+border:2px solid #ddd;
+background:white;
+margin:0 30px;
+margin-top:30px;
 }
 
 
@@ -41,22 +38,22 @@
   width:100%;
   background: $blue;
   color:white;
-    padding: 15px;
+  padding: 15px;
   font-weight: 700;
   font-size: 20px;
-   
+
 }
 
 .droppable {
   float: left;
- // position: absolute;
-  width: 400px;
-  height: 100vh;
- // right: 0;
-//  top: 10;
-  border:2px solid #ddd;
-  background:#ddd;
-
+// position: absolute;
+width: 400px;
+min-height: calc(100vh - 80px);
+// right: 0;
+//
+border:2px solid #ddd;
+background:white;
+margin-top:30px;
 }
 
 .draggable {
@@ -78,14 +75,16 @@
     }
   }
   &:hover{
-      box-shadow: 0 0 14px $blue;
+    box-shadow: 0 0 14px $blue;
   }
-    div{
+  div{
     height: 20px;
   }
-  .title-sm{
-    font-weight: 600;
-    color:$blue;
-  }
 
+
+}
+
+.title-sm{
+  font-weight: 600;
+  color:$blue;
 }

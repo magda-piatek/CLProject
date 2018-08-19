@@ -2,28 +2,48 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from '../common/form/Form';
 import InBox from './InBox';
+import messageAction from '../../store/actions/messageAction';
+import categoryAction from '../../store/actions/categoryAction';
+
 class InBoxContainer extends Component {
   constructor (props) {
-      super(props)
-      this.state = {
+    super(props)
+    this.state = {
 
     }
   };
+  componentDidMount() {
+    this.props.getMessage();
+    this.props.getCategory();
+
+  }
 
   render() {
-    
-const {userById} = this.props; 
+
+    const {userById,message,category} = this.props; 
 
     return (
-      <InBox userById={userById} />
-    );
+      <InBox category={category} userById={userById} message={message} />
+      );
   }
 }
 function mapStateToProps(state){
   return {
-   userById: state.userById,
+    message: state.message,
+    userById:state.userById,
+    category:state.category
+
+
+
   }
 };
+function mapDispatchToProps(dispatch) {
+  return {
+    getMessage: () => dispatch(messageAction.getMessage()),
+    getCategory:() => dispatch(categoryAction.getCategory())
 
-export default connect(mapStateToProps, null)(InBoxContainer);
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(InBoxContainer);
 

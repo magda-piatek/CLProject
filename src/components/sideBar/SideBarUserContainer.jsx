@@ -12,25 +12,19 @@ class SideBarContainer extends Component {
       {
         linkTo:'postbox/',
         icon: 'flaticon-add',
-        title: 'PostBox',
+        title: 'WYŚLIJ WIADOMOŚĆ',
       },
 
       {
         linkTo:'inbox',
         icon: 'flaticon-calendar',
-        title: 'InBox',
+        title: 'SKRZYNKA ODBIORCZA',
       },
       {
         linkTo:'messages',
         icon: 'flaticon-group',
-        title: 'Your messages',
-      },
-      {
-        linkTo:'services',
-        icon: 'flaticon-calendar-1',
-        title: 'Tasks status',
-      },
-     
+        title: 'TWOJE WIADOMOŚCI',
+      }
 
       ]
     }
@@ -43,13 +37,13 @@ class SideBarContainer extends Component {
 
     return (
       <div className="sidebar-outer">
-      <MediaQuery  query="(max-width: 575px)">
-      {hamburger}
-      {this.state.display ? <SideBar display={this.display} links={this.state.links} /> : null}
-      </MediaQuery>
-      <MediaQuery  query="(min-width: 576px)">
-      <SideBar display={this.display} links={this.state.links} />
-      </MediaQuery>
+        <MediaQuery  query="(max-width: 575px)">
+          {hamburger}
+          {this.state.display ? <SideBar display={this.display} links={this.state.links} /> : null}
+        </MediaQuery>
+        <MediaQuery  query="(min-width: 576px)">
+          <SideBar display={this.display} links={this.state.links} />
+        </MediaQuery>
       </div>
       );
   }

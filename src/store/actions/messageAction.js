@@ -18,6 +18,7 @@ export const messageGetAction = (message) => {
 }
 
 export const sendMessage = (r) => {
+  console.log(r)
   return (dispatch) => {
     request('/message', 'POST',r)
     .then(r => dispatch(messageSendAction()))
@@ -43,9 +44,18 @@ export const updateCategory = (id,s) => {
     //TODO catch
   }
 }
+
+export const deleteMessage = (id,s) => {
+  console.log(id,s)
+  return (dispatch) => {
+    request('/message/'+id+'/', 'DELETE')
+    .then(r => dispatch(getMessage()))
+    //TODO catch
+  }
+}
 export default {
 sendMessage,
 getMessage,
 updateCategory,
-
+deleteMessage,
 }

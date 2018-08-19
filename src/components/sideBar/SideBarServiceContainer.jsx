@@ -30,7 +30,7 @@ class SideBarContainer extends Component {
         icon: 'flaticon-calendar-1',
         title: 'Tasks status',
       },
-     
+  
 
       ]
     }
@@ -43,13 +43,13 @@ class SideBarContainer extends Component {
 
     return (
       <div className="sidebar-outer">
-      <MediaQuery  query="(max-width: 575px)">
-      {hamburger}
-      {this.state.display ? <SideBar display={this.display} links={this.state.links} /> : null}
-      </MediaQuery>
-      <MediaQuery  query="(min-width: 576px)">
-      <SideBar display={this.display} links={this.state.links} />
-      </MediaQuery>
+        <MediaQuery  query="(max-width: 575px)">
+          {hamburger}
+          {this.state.display ? <SideBar display={this.display} links={this.state.links} /> : null}
+        </MediaQuery>
+        <MediaQuery  query="(min-width: 576px)">
+          <SideBar display={this.display} links={this.state.links} />
+        </MediaQuery>
       </div>
       );
   }

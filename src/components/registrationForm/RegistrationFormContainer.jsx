@@ -5,9 +5,8 @@ import registrationAction from '../../store/actions/registrationAction';
 import moment from 'moment';
 import categoryAction from '../../store/actions/categoryAction';
 import { Redirect } from 'react-router-dom';
-import {
-  withRouter
-} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
 class RegistrationFormContainer extends Component {
   componentDidMount(){
     this.props.getCategory();
@@ -26,12 +25,11 @@ class RegistrationFormContainer extends Component {
       },
       email: '',
       phoneNumber: '',
-//birthDate: moment(),
-sex: '', //todo
-password: '',
-passwordAgain: '',
-type:'',
-}
+      sex: '',
+      password: '',
+      passwordAgain: '',
+      type:'',
+  }
 };
 
 
@@ -40,7 +38,6 @@ register = (data) => {
   if (!isEmpty && this.state.password === this.state.passwordAgain){
     this.props.registration(this.state);
     this.props.history.push('/');
-
   }
 }
 

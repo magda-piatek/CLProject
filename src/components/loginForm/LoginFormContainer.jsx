@@ -36,14 +36,12 @@ componentDidUpdate(prevProps, prevState){
     const {registration} = this.props;
     const {password, passwordAgain} = this.state;
 
-     //if (this.state.type) {
            switch (this.state.type) {
       case '0':
           return <Redirect to='/user/'/>
       case '1':
-          return <Redirect to='/service'/>
+          return <Redirect to='/service/'/>
       
-    //}  
      }
     return (
       <div>

@@ -1,20 +1,40 @@
 {
   "category": [
     {
-      "id": 1,
-      "name": "Naprawa"
+      "name": "Serwis sprzętu",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "NAprawa2"
-    },
-    {
-      "name": "sa",
+      "name": "HR",
       "id": 3
     },
     {
-      "name": "sasa",
+      "name": "Księgowość",
       "id": 4
+    },
+    {
+      "name": "IT",
+      "id": 5
+    },
+    {
+      "name": "Dział porządkowy",
+      "id": 6
+    },
+    {
+      "name": "Dział sprzedaży",
+      "id": 7
+    },
+    {
+      "name": "Sekretariat",
+      "id": 8
+    },
+    {
+      "name": "Testowa",
+      "id": 9
+    },
+    {
+      "name": "Kuchnia",
+      "id": 10
     }
   ],
   "login": [],
@@ -26,262 +46,182 @@
   ],
   "message": [
     {
-      "stateOfTask": "inProgess",
-      "title": "cd",
-      "message": "cdddd",
-      "sender": 11,
+      "category": "6",
+      "title": "płyn do mycia naczyń",
+      "message": "Proszę o dostarczenie płynu do mycia naczyń do kuchni",
+      "sender": 1,
       "state": "complete",
-      "category": 1,
-      "id": 1
-    },
-    {
-      "stateOfTask": "inProgess",
-      "title": "cdcds",
-      "message": "cdddddssds",
-      "sender": 11,
-      "state": "inProgess",
-      "category": 2,
+      "messageReceived": "Gotowe",
       "id": 2
     },
     {
-      "category": "1",
-      "title": "gf",
-      "message": "hgf",
-      "sender": 100,
-      "state": "wip",
-      "id": 3
-    },
-    {
-      "category": "2",
-      "title": "gfhh",
-      "message": "hgfhhh",
-      "sender": 100,
-      "state": "wip",
+      "category": "4",
+      "title": "Nowe monitory",
+      "message": "Czy środki są już przygotowane? ",
+      "sender": 3,
+      "state": "complete",
+      "messageReceived": "Gotowe",
       "id": 4
     },
     {
-      "category": "1",
-      "title": "hg",
-      "message": "hg",
-      "sender": 100,
-      "state": "inProgess",
+      "category": "3",
+      "title": "pytanie o Anne Nowak",
+      "message": "Jak tam przebiega rekrutacja Anny? ",
+      "sender": 3,
+      "state": "wip",
+      "messageReceived": "Jest w trakcie",
       "id": 5
     },
     {
-      "category": "1",
-      "title": "hg",
-      "message": "hg",
-      "sender": 100,
-      "state": "inProgess",
+      "category": "2",
+      "title": "Naprawa komputera",
+      "message": "Proszę o naprawę komputera Pani Ilony",
+      "sender": 3,
+      "state": "wip",
+      "messageReceived": "",
       "id": 6
     },
     {
-      "category": "2",
-      "title": "hg",
-      "message": "hg",
-      "sender": 100,
-      "state": "inProgess",
+      "category": "1",
+      "title": "Promocja urodzin naszej firmy",
+      "message": "Proszę o napisanie posta na faceboook`u dotyczącego urodzin naszej firmy",
+      "sender": 3,
+      "state": "wip",
+      "messageReceived": "",
       "id": 7
     },
     {
-      "category": "1",
-      "title": "cvb",
-      "message": "vc",
+      "category": "4",
+      "title": "Przelew do Pana Romana",
+      "message": "Proszę o wykonanie przelewu do Pana za pracę w zeszłym tygodniu",
+      "sender": 4,
       "state": "wip",
+      "messageReceived": "",
       "id": 8
     },
     {
-      "category": "1",
-      "title": "fds",
-      "message": "fdss",
-      "sender": 100,
-      "state": "inProgess",
+      "category": "6",
+      "title": "Mycie okien",
+      "message": "Proszę o umycie okien w sekretariacie",
+      "sender": 4,
+      "state": "wip",
+      "messageReceived": "",
       "id": 9
+    },
+    {
+      "category": "1",
+      "title": "Drukowanie ulotek",
+      "message": "Proszę o jak najszybsze wydrukowanie ulotek",
+      "sender": 4,
+      "state": "wip",
+      "messageReceived": "",
+      "id": 10
+    },
+    {
+      "category": "5",
+      "title": "Utworzenie poczty",
+      "message": "Proszę o stworzenie nowego e-mail`a dla Anny Nowak",
+      "sender": 3,
+      "state": "complete",
+      "messageReceived": "Ok ",
+      "id": 11
+    },
+    {
+      "category": "4",
+      "title": "faktura za ciasteczka",
+      "message": "Proszę o rozliczenie",
+      "sender": 3,
+      "state": "inProgess",
+      "messageReceived": "Jesteśmy w trakcie",
+      "id": 12
+    },
+    {
+      "category": "9",
+      "title": "Herbata",
+      "message": "Proszę o zakup herbaty",
+      "sender": 4,
+      "state": "wip",
+      "messageReceived": "",
+      "id": 13
+    },
+    {
+      "category": "10",
+      "title": "Zakup herbaty",
+      "message": "Proszę o zakup herbaty",
+      "sender": 4,
+      "state": "complete",
+      "messageReceived": "zakupiono",
+      "id": 14
     }
   ],
   "user": [
     {
-      "name": "sd",
-      "surname": "dfgd",
+      "name": "Adam",
+      "surname": "Kowalski",
       "address": {
-        "town": "gd",
-        "street": "gfd",
-        "houseNo": "gfd",
-        "zipCode": "gd"
+        "town": "Gliwice",
+        "street": "Zwycięstwa",
+        "houseNo": "43",
+        "zipCode": "44-100"
       },
-      "email": "gfd",
-      "phoneNumber": "gfd",
+      "email": "user1@user1.com",
+      "phoneNumber": "5656565",
       "sex": "m",
-      "password": "gd",
-      "passwordAgain": "gdgfd",
-      "type": "1",
-      "category": "2",
-      "inBox": [],
+      "password": "user1",
+      "passwordAgain": "user1",
+      "type": "0",
       "id": 1
     },
     {
-      "name": "ala",
-      "surname": "wq",
+      "name": "Admin",
+      "surname": "Adminowski",
       "address": {
-        "town": "ewq",
-        "street": "wd",
-        "houseNo": "432",
-        "zipCode": "43"
+        "town": "Katowice",
+        "street": "Wolności",
+        "houseNo": "44",
+        "zipCode": "44-120"
       },
-      "email": "ala@wp.pl",
-      "phoneNumber": "432",
+      "email": "admin@admin.com",
+      "phoneNumber": "89895563",
       "sex": "m",
-      "password": "333",
-      "passwordAgain": "333",
-      "type": "0",
-      "category": "1",
-      "inBox": [],
+      "password": "admin",
+      "passwordAgain": "admin",
+      "type": "1",
       "id": 2
     },
     {
-      "name": "admin",
-      "surname": "adminer",
+      "name": "Barbara",
+      "surname": "Kiełkowska",
       "address": {
-        "town": "re",
-        "street": "rere",
-        "houseNo": "re",
-        "zipCode": "re"
+        "town": "Żory",
+        "street": "Jarzębinowa ",
+        "houseNo": "89",
+        "zipCode": "44-230"
       },
-      "email": "admin@admin.pl",
-      "phoneNumber": "54343",
-      "sex": "m",
-      "password": "aaa",
-      "passwordAgain": "aaa",
-      "type": "1",
-      "category": "1",
-      "inBox": [],
+      "email": "user2@user2.com",
+      "phoneNumber": "89896866",
+      "sex": "f",
+      "password": "user2",
+      "passwordAgain": "user2",
+      "type": "0",
       "id": 3
     },
     {
-      "name": "er",
-      "surname": "er",
+      "name": "Jan",
+      "surname": "Kowalski",
       "address": {
-        "town": "er",
-        "street": "er",
-        "houseNo": "43",
-        "zipCode": "43"
+        "town": "Rybnik",
+        "street": "Dworcowa",
+        "houseNo": "89",
+        "zipCode": "44-220"
       },
-      "email": "re",
-      "phoneNumber": "4",
+      "email": "user3@user3.com",
+      "phoneNumber": "839283943",
       "sex": "m",
-      "password": "fd",
-      "passwordAgain": "fd",
+      "password": "user2",
+      "passwordAgain": "user2",
       "type": "0",
-      "category": "2",
-      "inBox": [],
       "id": 4
-    },
-    {
-      "name": "gf",
-      "surname": "gfd",
-      "address": {
-        "town": "fgd",
-        "street": "gf",
-        "houseNo": "dg",
-        "zipCode": "gf"
-      },
-      "email": "d",
-      "phoneNumber": "gd",
-      "sex": "m",
-      "password": "gg",
-      "passwordAgain": "gg",
-      "type": "0",
-      "category": null,
-      "inBox": [],
-      "id": 5
-    },
-    {
-      "name": "gf",
-      "surname": "gfd",
-      "address": {
-        "town": "fgd",
-        "street": "gf",
-        "houseNo": "dg",
-        "zipCode": "gf"
-      },
-      "email": "d",
-      "phoneNumber": "gd",
-      "sex": "m",
-      "password": "gg",
-      "passwordAgain": "gg",
-      "type": "0",
-      "category": "1",
-      "inBox": [],
-      "id": 6
-    },
-    {
-      "name": "gf",
-      "surname": "gfd",
-      "address": {
-        "town": "fgd",
-        "street": "gf",
-        "houseNo": "dg",
-        "zipCode": "gf"
-      },
-      "email": "d",
-      "phoneNumber": "gd",
-      "sex": "m",
-      "password": "d",
-      "passwordAgain": "d",
-      "type": "0",
-      "category": "1",
-      "inBox": [
-        "sa",
-        "sasa",
-        "sasaasa"
-      ],
-      "id": 11
-    },
-    {
-      "name": "a",
-      "surname": "s",
-      "address": {
-        "town": "ds",
-        "street": "sd",
-        "houseNo": "43",
-        "zipCode": "re"
-      },
-      "email": "a",
-      "phoneNumber": "fd",
-      "sex": "m",
-      "password": "a",
-      "passwordAgain": "a",
-      "type": "1",
-      "category": "1",
-      "inBox": [
-        "sa",
-        "sasa",
-        "sasaasa"
-      ],
-      "id": 99
-    },
-    {
-      "name": "u",
-      "surname": "user",
-      "address": {
-        "town": "kj",
-        "street": "jl",
-        "houseNo": "jl",
-        "zipCode": "jl"
-      },
-      "email": "u",
-      "phoneNumber": "jlk",
-      "sex": "m",
-      "password": "u",
-      "passwordAgain": "u",
-      "type": "0",
-      "category": "1",
-      "inBox": [
-        "sa",
-        "sasa",
-        "sasaasa"
-      ],
-      "id": 100
     }
   ]
 }

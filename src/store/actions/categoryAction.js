@@ -13,7 +13,7 @@ export const createCategory = (r) => {
   return (dispatch) => {
     request(
       '/category',
-      'POST', r)
+      'POST', r).then(r => dispatch(getCategory()))
 //TODO catch
 }
 }
@@ -25,7 +25,13 @@ export const getCategory = () => {
     //TODO catch
   }
 }
-
+export const deleteCategory = (id) => {
+  return (dispatch) => {
+    request('/category/'+id+'/', 'DELETE' )
+    .then(r => dispatch(getCategory()))
+    //TODO catch
+  }
+}
 export const categorySelect = (categorySelected) => {
  return {
     type: CATEGORY_SELECTED_RECEIVED,
@@ -35,5 +41,6 @@ export const categorySelect = (categorySelected) => {
 export default {
   createCategory,
 getCategory,
-categorySelect
+categorySelect,
+deleteCategory
 }

@@ -21,22 +21,19 @@ export const getUsers = () => {
   return (dispatch) => {
     request('/user', 'GET' )
     .then(r => dispatch(userReceivedAction(r)))
-    //TODO catch
   }
 }
-export const sendMessageToUser = (userId,message) => {
-  console.log(userId,message)
+export const sendMessageToUser = (userId,r) => {
+  console.log(userId,r)
   return (dispatch) => {
-   request('/user/'+userId+'/', 'PATCH',{inBox:message})
+   request('/message/'+userId+'/', 'PATCH',{messageReceived:r})
     .then(r => dispatch(getUsers()))
-    //TODO catch
   }
 }
 export const currentUser = (id) => {
   return (dispatch) => {
     request('/user/'+id+'/', 'GET')
     .then(r => dispatch(userCurrentAction(r)))
-    //TODO catch
   }
 }
 

@@ -6,8 +6,8 @@ class InboxsPage extends Component {
   render() {
     return (
         <InBoxContainer />
-  )
-}
+    )
+  }
 }
 
 export default InboxsPage;

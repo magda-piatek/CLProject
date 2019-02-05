@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from '../common/form/Form';
-//import Button from 'components/common/button/Button';
 
 class InBox extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-
-    }
-  };
-
   headerCell(name){
     return (<th>
       {name}
@@ -28,14 +20,11 @@ class InBox extends Component {
     console.log(this.props.category)
     let inBox;
     if(this.props.message){
-
       inBox = this.props.message.filter(e => e.sender == this.props.userById.id).map(e => (
         <tr key={e.id}>
-        {b(e.title)}
-        {b(e.messageReceived)}
-        {b((this.props.category.find(el => el.id == e.category)||{}).name)}
-
-
+          {b(e.title)}
+          {b(e.messageReceived)}
+          {b((this.props.category.find(el => el.id == e.category)||{}).name)}
         </tr>))
     }
     else{
@@ -59,7 +48,7 @@ class InBox extends Component {
           </table>
         </div>
       </div>
-      );
+     );
   }
 }
 

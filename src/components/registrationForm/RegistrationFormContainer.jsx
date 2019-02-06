@@ -11,7 +11,6 @@ class RegistrationFormContainer extends Component {
   componentDidMount(){
     this.props.getCategory();
   }
-
   constructor (props) {
     super(props)
     this.state = {
@@ -32,39 +31,37 @@ class RegistrationFormContainer extends Component {
   }
 };
 
-
 register = (data) => {
   const isEmpty = Object.values(this.state).some(x => (x === null || x === ''));
-  if (!isEmpty && this.state.password === this.state.passwordAgain){
-    this.props.registration(this.state);
-    this.props.history.push('/');
+    if (!isEmpty && this.state.password === this.state.passwordAgain){
+      this.props.registration(this.state);
+      this.props.history.push('/');
   }
 }
-
 
 
 render() {
   const {registration,category} = this.props;
   const {password, passwordAgain} = this.state;
-  return (
-    <RegistrationForm
-    formData={this.state} category={category}
-    onChange={v=>this.setState(v)}
-    action={this.register} />
-    );
+    return (
+        <RegistrationForm
+        formData={this.state} category={category}
+        onChange={v=>this.setState(v)}
+        action={this.register} />
+      );
+  }
 }
-}
+
 function mapStateToProps(state){
   return {
     category:state.category
-
   }
 };
+
 function mapDispatchToProps(dispatch) {
   return {
     registration: (registrationInfo) => dispatch(registrationAction(registrationInfo)),
     getCategory: () => dispatch(categoryAction.getCategory())
-
   }
 }
 

@@ -14,17 +14,17 @@ class LoginFormContainer extends Component {
       type: null,
       userId:null
     }
-
   };
 
   componentDidMount() {
     this.props.getUsers();
   }
-componentDidUpdate(prevProps, prevState){
-  if (prevState.userId !== this.state.userId){
-    this.props.currentUser(this.state.userId)
+  
+  componentDidUpdate(prevProps, prevState){
+      if (prevState.userId !== this.state.userId){
+      this.props.currentUser(this.state.userId)
+    }
   }
-}
   check() {
     const user = this.props.user.find(el => el.email === this.state.email && el.password === this.state.password); 
     if(user) {
@@ -35,14 +35,13 @@ componentDidUpdate(prevProps, prevState){
   render() {
     const {registration} = this.props;
     const {password, passwordAgain} = this.state;
-
            switch (this.state.type) {
       case '0':
           return <Redirect to='/user/'/>
       case '1':
           return <Redirect to='/service/'/>
-      
-     }
+   }
+    
     return (
       <div>
       <LoginForm
@@ -53,11 +52,13 @@ componentDidUpdate(prevProps, prevState){
     );
   } 
 }
+
 function mapStateToProps(state){
   return {
    user: state.user,
   }
 };
+
 function mapDispatchToProps(dispatch) {
   return {
       getUsers: () => dispatch(usersAction.getUsers()),

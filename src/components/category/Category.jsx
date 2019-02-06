@@ -28,15 +28,14 @@ render() {
   console.log(this.props.user);
   const h = (name)=>this.headerCell(name);
   const b = (name)=>this.bodyCell(name);
-  let rows;
 
+  let rows;
   if (this.props.category){
     rows = this.props.category.map(e => (
       <tr key={e.id}>
       {b(e.id)}
       {b(e.name)}
       {b(<button onClick={()=>this.props.deleteCategory(e.id)} className="btn-style btn-style-sm">USUŃ</button>)}
-
       </tr>))
   } 
   else{
@@ -65,7 +64,6 @@ render() {
                         {h('id')}
                         {h('name')}
                         {h('name')}
-
                       </tr>
                     </thead>
                     <tbody>
@@ -73,10 +71,8 @@ render() {
                     </tbody>
                   </table>
                 </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </div>

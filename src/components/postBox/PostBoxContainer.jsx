@@ -6,7 +6,6 @@ import messageAction from '../../store/actions/messageAction';
 
 class PostBoxContainer extends Component {
   render() {
-console.log(this.props.userId)
     return (
         <MessageFormContainer />
     );

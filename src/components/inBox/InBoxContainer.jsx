@@ -6,37 +6,27 @@ import messageAction from '../../store/actions/messageAction';
 import categoryAction from '../../store/actions/categoryAction';
 
 class InBoxContainer extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-
-    }
-  };
   componentDidMount() {
     this.props.getMessage();
     this.props.getCategory();
-
   }
 
   render() {
-
     const {userById,message,category} = this.props; 
-
     return (
       <InBox category={category} userById={userById} message={message} />
       );
   }
 }
+
 function mapStateToProps(state){
   return {
     message: state.message,
     userById:state.userById,
     category:state.category
-
-
-
   }
 };
+
 function mapDispatchToProps(dispatch) {
   return {
     getMessage: () => dispatch(messageAction.getMessage()),

@@ -15,15 +15,12 @@ class MessageFormContainer extends Component {
       sender:this.props.userById.id,
       state:'wip',
       messageReceived:''
-
     }
   };
-
 
   componentDidMount() {
     this.props.getCategory();
   }
-
 
   render() {
     const {category, userId} = this.props;
@@ -32,7 +29,7 @@ class MessageFormContainer extends Component {
       <div>
         <MessageForm category={category} action={()=>this.props.sendMessage(this.state)} formData={this.state} onChange={s=>this.setState(s)} />
       </div>
-      );
+     );
   }
 }
 
@@ -41,9 +38,9 @@ function mapStateToProps(state){
     user: state.user,
     category:state.category,
     userById:state.userById
-
   }
 };
+
 function mapDispatchToProps(dispatch) {
   return {
     getCategory: () => dispatch(categoryAction.getCategory()),

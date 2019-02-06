@@ -10,15 +10,14 @@ class AppDragDropDemo extends Component {
       tasks:'',
       showModal:null
     }
-
   };
-
 
   componentDidUpdate(prevProps){
     if (prevProps.message!==this.props.message) {
       this.setState({tasks:this.props.message});
     }
   }
+  
   onDragStart = (ev, id) => {
     console.log('dragstart:',id);
     ev.dataTransfer.setData("id", id);
@@ -41,7 +40,6 @@ class AppDragDropDemo extends Component {
     this.setState({
       tasks:tasks
     });
-
     this.props.changed(id,cat)
   }
 
@@ -52,21 +50,18 @@ class AppDragDropDemo extends Component {
     })
     )
   }
+  
   delete = (id) => {
    this.props.deleteMessage(id);
   }
 
 render() {
-
-
-
   let modalContent;
   let detailsBlock;
 
   const {formData,onChange,category,user} = this.props;
  
   this.state.showModal!==null && this.props.user ? detailsBlock =
-
   <div className="detailsOfTask">
   <ModalContainer  hide={()=>this.setState({showModal: null})}> 
 
@@ -83,37 +78,44 @@ render() {
         {name:'', path:'messageToUser', type:'textarea'},
         ]}
         />
-        <button className="btn-style btn-style-sm" onClick={()=>{this.props.sendMessageToUser(el.id);this.setState({showModal: null})}}>Wyślij</button>
+        <button className="btn-style btn-style-sm" 
+         onClick={()=>{this.props.sendMessageToUser(el.id);this.setState({showModal: null})}}>
+          Wyślij
+      </button>
       </div>
       </div> )}</ModalContainer>
   </div> : null;
-
-    this.state.tasks ?   modalContent =   this.state.tasks.filter(el => el.id == this.state.showModal) : null;
-    console.log(modalContent)
+    
+    if(this.state.tasks) modalContent = this.state.tasks.filter(el => el.id == this.state.showModal);
+    else modalContent=[];
     var tasks = {
       wip: [],
       inProgess:[],
       complete: []
     }
 
-  this.state.tasks ? this.state.tasks.filter(el => el.category == this.props.categorySelected.categoriesSelected).forEach ((t) => {
-    (tasks[t.state]||[]).push(
-      <div key={t.id} 
-          onDragStart = {(e) => this.onDragStart(e, t.id)}
-          draggable
-          className="draggable"
-          style = {{backgroundColor: t.bgcolor}}
-          >
-          <div> <span className="title-sm">TYTUŁ: </span>{t.title}</div>
-          <div> <span className="title-sm">KATEGORIA: </span>{(category.find(e=>e.id == t.category)||{}).name}</div>
-          <div className="mb-12"> <span className="title-sm">NADAWCA: </span>
-          <span>{(user.find(e=>e.id == t.sender)||{}).name}</span>
-          <span> {(user.find(e=>e.id == t.sender)||{}).surname}</span></div>
-          <a className="btn-style" onClick={()=>this.show(t.id)}>Zobacz więcej</a>
-          <a className="btn-style" style={{'background':'grey'}} onClick={()=>this.delete(t.id)}>Usuń</a>
-    </div>
-  );
-  }) : null;
+  if(this.state.tasks){
+    this.state.tasks.filter(el => el.category == this.props.categorySelected.categoriesSelected).forEach ((t) => {
+      (tasks[t.state]||[]).push(
+        <div key={t.id} 
+            onDragStart = {(e) => this.onDragStart(e, t.id)}
+            draggable
+            className="draggable"
+            style = {{backgroundColor: t.bgcolor}}
+            >
+            <div> <span className="title-sm">TYTUŁ: </span>{t.title}</div>
+            <div> <span className="title-sm">KATEGORIA: </span>{(category.find(e=>e.id == t.category)||{}).name}</div>
+            <div className="mb-12"> <span className="title-sm">NADAWCA: </span>
+            <span>{(user.find(e=>e.id == t.sender)||{}).name}</span>
+            <span> {(user.find(e=>e.id == t.sender)||{}).surname}</span></div>
+            <a className="btn-style" onClick={()=>this.show(t.id)}>Zobacz więcej</a>
+            <a className="btn-style" style={{'background':'grey'}} onClick={()=>this.delete(t.id)}>Usuń</a>
+        </div>
+      );
+    })
+  }
+  else console.log("error");
+    
 
 
   return (
@@ -142,13 +144,10 @@ render() {
   }
 }
 
-
 function mapStateToProps(state) {
   return {
     categorySelected: state.categorySelected,
   };
 }
-
-
 
 export default connect(mapStateToProps, null)(AppDragDropDemo);

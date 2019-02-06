@@ -21,7 +21,7 @@ class Form extends Component {
               value={dotProp.get(formData, path)}
               onChange={v=>onChange(dotProp.set(formData, s.path, v))}
             />
-  }
+      }
 }
 
 export default Form; 

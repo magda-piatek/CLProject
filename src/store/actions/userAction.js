@@ -39,8 +39,8 @@ export const currentUser = (id) => {
 
 
 export default {
-getUsers,
-currentUser,
-sendMessageToUser
+  getUsers,
+  currentUser,
+  sendMessageToUser
 } 
   

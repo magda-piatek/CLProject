@@ -23,7 +23,6 @@ export const sendMessage = (r) => {
     request('/message', 'POST',r)
     .then(r => dispatch(messageSendAction()))
     .then(r=>dispatch(getMessage()))
-    //TODO catch
   }
 }
 
@@ -31,7 +30,6 @@ export const getMessage = (r) => {
   return (dispatch) => {
     request('/message', 'GET',r)
     .then(r => dispatch(messageGetAction(r)))
-    //TODO catch
   }
 }
  
@@ -41,7 +39,6 @@ export const updateCategory = (id,s) => {
   return (dispatch) => {
     request('/message/'+id+'/', 'PATCH',{state:s})
     .then(r => dispatch(getMessage()))
-    //TODO catch
   }
 }
 
@@ -50,12 +47,11 @@ export const deleteMessage = (id,s) => {
   return (dispatch) => {
     request('/message/'+id+'/', 'DELETE')
     .then(r => dispatch(getMessage()))
-    //TODO catch
   }
 }
-export default {
-sendMessage,
-getMessage,
-updateCategory,
-deleteMessage,
-}
+  export default {
+    sendMessage,
+    getMessage,
+    updateCategory,
+    deleteMessage,
+  }
